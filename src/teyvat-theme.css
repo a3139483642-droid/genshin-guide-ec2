@@ -1,0 +1,417 @@
+/* The artwork informs the interface: midnight blue, warm paper, and fine gold rules. */
+:root {
+  --paper:#f4f1e9;--card:#fffdf7;--ink:#29374a;--muted:#707782;
+  --green:#293a55;--deep:#111a2e;--gold:#a88b51;--line:#ded7c8;
+  --soft:#ece8dd;--shadow:0 8px 30px #14223c06;
+}
+body {background:var(--paper);min-width:0}
+::selection {background:#d9c69d;color:#15243b}
+h1,h2,h3 {font-family:"Songti SC","SimSun",Georgia,serif}
+.btn {border-radius:4px;font-size:12px;border-color:#d5cbb6}
+.btn.primary {background:#293a55;border-color:#293a55;color:#f5e6c4;box-shadow:inset 0 0 0 3px #293a55,inset 0 0 0 4px #d8c08b35}
+.btn.primary:hover {background:#3a4d6a;border-color:#3a4d6a;box-shadow:inset 0 0 0 3px #3a4d6a,inset 0 0 0 4px #d8c08b55}
+.btn:hover {border-color:#bba573;background:#eee8da}
+.panel {border-radius:5px}
+.eyebrow {color:#a28b5a}
+.tag {border-radius:3px;background:#eceade;color:#69705c}
+.topbar {height:80px;background:#111a2ef7;border-color:#c9af752a;box-shadow:0 3px 16px #090e1b1a;color:#ede6d7;gap:65px}
+.brand {gap:12px}
+.brandmark {border:0;border-radius:0;background:transparent;color:#d6bc81;width:36px;height:42px}
+.brandmark svg {width:31px;height:31px;stroke-width:1.1}
+.brand strong {font-size:18px;font-weight:400;letter-spacing:2px;color:#f1eadc}
+.brand small {font-size:7px;letter-spacing:2.4px;color:#aeb5c3;margin-top:5px}
+.topnav {gap:34px;font-size:12px}
+.topnav a {color:#b1bacb;letter-spacing:.5px}
+.topnav a:hover,.topnav a.active {color:#e4c88d}
+.topnav a.active:after {height:2px;background:#dbc28b;left:12px;right:12px}
+.topnav a.active:before {content:'';position:absolute;width:5px;height:5px;bottom:9px;left:calc(50% - 2px);background:#d6bc81;transform:rotate(45deg)}
+.top-actions {font-size:12px}
+.top-actions .login-button {border:1px solid #d6bc8160;border-radius:4px;color:#e7cf9e;background:#d6bc8109;padding:10px 18px;box-shadow:inset 0 0 0 3px #111a2e,inset 0 0 0 4px #d6bc8118}
+.top-actions .login-button:hover {background:#d6bc811a;border-color:#d6bc81a0}
+.top-actions .avatar {background:#29364e;border-color:#bca77660;color:#e3cfa8}
+.top-actions .account-link {color:#ded8ca}
+.catalog-page {padding-top:0}
+
+/* A chapter opening, with the illustration's focal point kept clear of the text. */
+.journey-hero {display:block;min-height:580px;margin:0;border:0;border-radius:0;isolation:isolate;position:relative;overflow:hidden;background:#111a2e;color:#f8f3e8}
+.journey-art {position:absolute;inset:0 0 0 24%;width:76%;height:100%;min-height:0;overflow:hidden;z-index:-2;mask-image:linear-gradient(90deg,transparent,#000 14%)}
+.journey-art>img {position:absolute;width:100%;height:100%;inset:0;object-fit:cover;object-position:52% 45%;filter:saturate(.83) brightness(.94)}
+.journey-art:before {content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,#111a2e 0%,#111a2eb8 10%,#111a2e1a 43%,#111a2e05 80%),linear-gradient(0deg,#111a2eeb 0%,#111a2e1c 25%,transparent 70%);pointer-events:none}
+.journey-hero:after {content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,#d4bb7e00,#d4bb7e80,#d4bb7e00)}
+.journey-content {position:relative;z-index:2;display:flex;align-items:center;min-height:580px;padding-top:46px;padding-bottom:75px}
+.journey-copy {padding:0;width:530px;max-width:49%;align-self:auto}
+.journey-kicker {color:#b6bdcb;font-size:10px;letter-spacing:1.5px;gap:9px}
+.journey-kicker>span {width:5px;height:5px;border-radius:0;transform:rotate(45deg);background:#d9bf85;box-shadow:none}
+.hero-overline {font-size:9px!important;letter-spacing:3px!important;color:#a7afbd!important;margin:24px 0 0!important}
+.journey-copy h1 {font-size:clamp(42px,4.1vw,60px);font-weight:400;letter-spacing:3px;line-height:1.55;color:#f8f4e9;margin:15px 0 21px;text-shadow:0 3px 20px #111a2e40}
+.journey-copy h1 span {color:#dfc68d}
+.hero-rule {display:flex;align-items:center;gap:10px;color:#bfa773;font-size:12px;margin:0 0 20px}
+.hero-rule>span {display:block;width:110px;height:1px;background:linear-gradient(90deg,#bfa77388,#bfa773)}
+.journey-copy>p:not(.hero-overline) {font-size:13px;line-height:2.05;color:#bdc4d1;letter-spacing:.3px}
+.journey-actions {margin-top:29px;gap:25px}
+.journey-actions .btn.primary {min-height:46px;padding:14px 23px;gap:25px;border-radius:3px;font-size:12px;color:#26334b;background:#e5d2a7;border-color:#e5d2a7;box-shadow:inset 0 0 0 3px #e5d2a7,inset 0 0 0 4px #73654b45}
+.journey-actions .btn.primary:hover {background:#f2e4c8;border-color:#f2e4c8;box-shadow:inset 0 0 0 3px #f2e4c8,inset 0 0 0 4px #73654b45}
+.hero-secondary {display:flex;align-items:center;gap:9px;font-size:11px;color:#d2d4d9;transition:color .2s}
+.hero-secondary:hover {color:#e5d2a7}
+.hero-caption {position:absolute;z-index:2;bottom:46px;right:max(48px,calc((100% - 1264px)/2));display:grid;grid-template-columns:25px 1fr;align-items:center;gap:10px 12px;text-align:right;color:#e3d2a9}
+.hero-caption-line {width:25px;height:1px;background:#d0bc90}
+.hero-caption>span:not(.hero-caption-line) {font-size:9px;letter-spacing:2px}
+.hero-caption small {grid-column:1/-1;font-family:"SimSun",serif;font-size:11px;letter-spacing:2px;color:#b5bdc9}
+.hero-scroll {position:absolute;bottom:24px;left:calc(50% - 30px);z-index:3;display:flex;gap:12px;align-items:center;flex-direction:column;color:#b9b2a5;font-size:8px;letter-spacing:2px}
+.scroll-diamond {display:grid;place-items:center;width:25px;height:25px;border:1px solid #c8b48755;transform:rotate(45deg);background:#111a2e65}
+.scroll-diamond svg {transform:rotate(45deg);width:12px;height:12px;color:#ddc796}
+.hero-constellation {position:absolute;z-index:1;right:6%;top:38px;width:117px;height:80px;border-top:1px solid #d9c08935;transform:rotate(-14deg);pointer-events:none}
+.hero-constellation>span {position:absolute;width:4px;height:4px;background:#ddcba5;transform:rotate(45deg);opacity:.6}
+.hero-constellation>span:nth-child(1) {left:0;top:-2px}
+.hero-constellation>span:nth-child(2) {right:0;top:-2px}
+.hero-constellation>span:nth-child(3) {right:20px;top:33px}
+.hero-constellation>span:nth-child(4) {right:53px;top:61px}
+
+/* Editorial dividers continue the visual language into useful page content. */
+.catalog-inner {position:relative}
+.catalog-inner .setup-note {margin-top:25px;display:flex;gap:12px;align-items:center;background:#eae3d1;border-color:#daceb2;font-size:12px}
+.handbook-intro {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px;padding:28px 6px;border-color:#d8cfba}
+.handbook-intro>div {gap:17px;position:relative;padding:2px 20px 2px 10px;min-width:0}
+.handbook-intro>div+div {border-left:1px solid #d9d0bd;padding-left:28px}
+.handbook-intro .feature-icon {width:44px;height:44px;display:grid;place-items:center;border:1px solid #d9cfb7;color:#a58d58;background:#f8f5ed;flex-shrink:0;transform:rotate(45deg)}
+.feature-icon>svg {transform:rotate(-45deg);stroke-width:1.3}
+.handbook-intro>div>span:not(.feature-icon) {display:grid;gap:7px}
+.handbook-intro small {font-size:8px;color:#a18d62;letter-spacing:1.4px;display:block}
+.handbook-intro strong {font-size:12px;color:#4b5362;letter-spacing:.5px;font-weight:400}
+.catalog-body {padding:47px 0 35px;scroll-margin-top:100px}
+.atlas-heading {display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:0;margin-bottom:31px}
+.section-ornament {display:flex;align-items:center;gap:18px;color:#b39a66;margin-bottom:17px}
+.section-ornament>span {width:54px;height:1px;background:linear-gradient(90deg,transparent,#bfae85)}
+.section-ornament>span:last-child {transform:rotate(180deg)}
+.section-ornament>svg {width:22px;height:22px;stroke-width:1}
+.atlas-heading .eyebrow {font-size:8px;letter-spacing:3.5px;color:#a38d5e}
+.atlas-heading h2 {font-size:31px;letter-spacing:3px;font-weight:400;margin:12px 0 11px;color:#303c4d}
+.atlas-heading>p {display:block;margin:0;font-size:12px;color:#868780;letter-spacing:.5px}
+.catalog-tools {border:1px solid #ddd3bc;border-radius:4px;background:#ebe6da;padding:13px 17px;margin-bottom:17px;gap:24px}
+.filters {gap:6px}
+.filter {border-radius:3px;color:#666c75;font-size:12px;padding:10px 14px;min-height:41px}
+.filter svg {opacity:.85}
+.filter.active {background:#293a55;color:#f2e5c8;border-color:#293a55;box-shadow:inset 0 0 0 2px #293a55,inset 0 0 0 3px #cfb57c3d}
+.filter.active svg {color:#dfc995}
+.filter:hover:not(.active) {background:#f8f4e9;border-color:#cebc95}
+.searchbox {width:285px}
+.searchbox input.search {border-radius:3px;border-color:#d7ccb3;background:#fcf9f1;min-height:41px;font-size:12px;color:#334056}
+.searchbox>svg {color:#a08f6f}
+.searchbox input::placeholder {color:#929187}
+.search-clear {color:#8e8067}
+.search-clear:hover {background:#ece6d9}
+.catalog-meta {font-size:11px;margin:0 2px 22px}
+.catalog-count {color:#81837f;font-size:11px}
+.catalog-count strong {color:#8c7447;font-size:12px}
+.count-dot {background:#b7a273;transform:rotate(45deg);border-radius:0;width:4px;height:4px}
+.ready-toggle {font-size:11px;color:#777c80}
+.ready-toggle input {accent-color:#9a8352}
+.result-filter {background:#e9e1cf;color:#8e7547}
+.reset-filters {color:#91784a}
+.character-grid {gap:25px 23px}
+.char-card {border:1px solid #d5c9af;border-radius:5px 5px 14px 5px;background:#fffcf4;box-shadow:0 3px 7px #26344a06;transition:transform .22s,border-color .22s,box-shadow .22s}
+.char-card:hover {border-color:#a68c53;transform:translateY(-5px);box-shadow:0 12px 25px #23304b12}
+.char-art {height:213px;background:linear-gradient(180deg,#ffffff25,var(--tint));border-bottom:1px solid #ddd3be}
+.char-art:before {top:31px;width:173px;height:173px;border:1px solid #ffffffb0;box-shadow:0 0 0 15px #ffffff0a,0 0 0 16px #ffffff3d,0 0 0 31px #ffffff14}
+.char-art:after {inset:11px;bottom:12px;width:auto;height:auto;transform:none;border:1px solid #fffdf25e;background:none;z-index:2;pointer-events:none}
+.char-art>.game-icon {height:198px;width:198px}
+.char-art .element {border-radius:2px;left:17px;top:16px;background:#fdfbf0a8;border:0;padding:5px 7px;font-size:10px;backdrop-filter:blur(6px)}
+.char-art .card-index {right:18px;top:21px;color:var(--tone);font-size:10px;opacity:.65}
+.char-art .art-note {bottom:13px;left:18px;letter-spacing:2px;font-size:9px}
+.card-orbit {display:none}
+.char-info {padding:19px 20px 13px}
+.char-info h3 {font-weight:400;color:#303d50;font-size:23px;letter-spacing:1.5px}
+.weapon-type {font-size:10px;color:#9b9383}
+.card-tags {margin-top:11px;gap:6px}
+.card-tags>span {font-size:10px;border:1px solid #e5decf;background:#f2eee4;color:#8b806b;padding:3px 7px;border-radius:2px}
+.char-bottom {border-color:#e5dccb;margin-top:17px;padding-top:12px;min-height:37px;font-size:11px}
+.char-bottom>span:first-child {color:#9a9284;font-size:10px}
+.char-bottom>span.ready-text {color:#977c44;font-weight:400}
+.char-bottom i {border-radius:0;background:#c9c1af;width:4px;height:4px;transform:rotate(45deg)}
+.char-bottom .ready-text i {background:#aa8e55}
+.card-open {width:27px;height:27px;border:1px solid #d6c9ac;border-radius:50%;background:#f3edde;color:#a88d55}
+.char-card:hover .card-open {background:#293a55;color:#e8d3a7;border-color:#293a55}
+.catalog-footnote {border-top:1px solid #ded5c1;margin-top:32px;padding-top:20px;color:#969184;font-size:10px}
+.catalog-footnote svg {color:#b29a67}
+.empty {background:#faf7ee;border-color:#d3c6a8;border-radius:5px}
+.empty h2 {color:#39465b;font-weight:400}
+.pagination {margin:30px 0 12px}
+
+/* Reading surfaces remain quiet, with illustrated covers reserved for matching characters. */
+.breadcrumb {color:#919086;font-size:11px}
+.character-hero {min-height:283px;padding:31px 40px;background:linear-gradient(110deg,#17243b,#26374f);border:1px solid #7a74643d;border-radius:5px;grid-template-columns:1fr 260px;overflow:hidden;color:#ece4d2;isolation:isolate}
+.character-hero:before {border-color:#d4be8638;box-shadow:0 0 0 32px #d4be8605,0 0 0 33px #d4be8612;right:-25px;top:-95px;z-index:-1}
+.character-hero:after {content:'';position:absolute;inset:10px;border:1px solid #ccb47730;pointer-events:none;z-index:1}
+.character-hero-copy {position:relative;z-index:2}
+.character-route {display:flex;align-items:center;gap:10px;font-size:8px;color:#b8af9b;letter-spacing:1px;margin-bottom:18px}
+.character-route>span:first-child {border:1px solid #c5b18050;color:#d1bd8e;padding:4px 8px;border-radius:2px;font-size:9px}
+.character-hero .eyebrow {color:#aebacc;font-size:9px;letter-spacing:1px}
+.character-hero h1 {font-size:43px;color:#f0e4c9;letter-spacing:4px;font-weight:400;margin:11px 0 9px}
+.character-title {color:#b6a580;font-size:13px;letter-spacing:3px;margin-bottom:18px}
+.character-hero .tag {background:#d8c08b10;color:#d1c2a3;border:1px solid #d8c08b30;font-size:10px}
+.hero-avatar {width:205px;height:205px;border:1px solid #d2bc8170;box-shadow:0 0 0 7px #d2bc8109,0 0 0 8px #d2bc8120;background:var(--character-tint,#e1e5e9);z-index:2}
+.character-cover-image {position:absolute;inset:0 0 0 auto;width:70%;height:100%;object-fit:cover;object-position:52% 47%;z-index:-2;opacity:.9;mask-image:linear-gradient(90deg,transparent,#000 24%)}
+.character-hero--illustrated {min-height:324px;background:#111a2e}
+.character-hero--illustrated:before {inset:0;width:auto;height:auto;border:0;border-radius:0;background:linear-gradient(90deg,#111a2e 0%,#111a2ee0 26%,#111a2e4d 58%,#111a2e18 100%);box-shadow:none;z-index:-1}
+.character-hero--illustrated .hero-avatar {visibility:hidden}
+.planbar .eyebrow {color:#a18e66}
+.tab {border-radius:3px;border-color:#d9ceb7;color:#7a7c7d;background:#f8f4eb}
+.tab.active {background:#293a55;color:#e5d4ae;border-color:#293a55;box-shadow:none}
+.guide-lead {background:#eae5d8;border-color:#dcd1ba;border-radius:4px}
+.guide-lead>.btn {background:#f9f5e9}
+.quick-build .quick-card {border-color:#ded3bd;border-radius:4px;background:#fffcf4;box-shadow:inset 0 3px 0 #b89e672d}
+.quick-build .quick-card:hover {border-color:#b29a67}
+.quick-build .quick-card .eyebrow {color:#ab9363}
+.quick-build .quick-card strong {color:#37445a;font-weight:400}
+.quick-build .quick-card>.small {border-color:#e9e1d0}
+.quick-build .quick-card p {color:#7f807b}
+.module-nav {background:#eae5d9;border-color:#d9ceb7;border-radius:4px}
+.module-nav small {color:#a08e68}
+.module-nav a {color:#7c7b75;border-radius:2px}
+.module-nav a>span {color:#ad9d7c}
+.module-nav a:hover,.module-nav a.active {background:#fffcf3;color:#8c733f}
+.section-head {border-color:#dbd1bc}
+.section-head h2 {color:#36445a;font-weight:400}
+.section-head .eyebrow {color:#b39e74}
+.anchor-link {color:#ad9767;border-color:#dbcfb2;background:#f4eedf}
+.weapon-card,.artifact-card,.rotation details {border-radius:4px;border-color:#ded2b9}
+.weapon-card .check {border-color:#e4dbca}
+.weapon-card h3,.artifact-copy h3 {font-weight:400;color:#3b475b}
+.compare-tray {background:#293a55;color:#f0e0c1;border-radius:4px}
+.compare-tray .btn {border-color:#8590a1;color:#f0e0c1}
+.notice.green {background:#e8ebed;border-color:#78909c;color:#425a6a}
+.step-number {background:#e9dfcb;border-color:#d9c69f;color:#9c834e}
+.progress-track {background:#dfd5c1}
+.progress-track span {background:#b29962}
+.materials .check {background:#f3eee2;border-color:#e2d7bf;border-radius:3px}
+.team-portraits .game-icon {border-radius:5px;border-color:#ede2c9}
+.source-block {border-left-color:#bba371}
+.source-block .eyebrow {color:#a88d58}
+.comment.reply {background:#eee8da;border-color:#d2c19a}
+.toast {background:#24334d;border:1px solid #a48d5d66;color:#f4e6c8;border-radius:4px}
+.footer {margin-top:20px;background:#111a2e;border-top:1px solid #bda46b40;color:#aab2c1;padding-top:36px;padding-bottom:36px}
+.footer-brand>svg {color:#c6ad77;stroke-width:1}
+.footer-brand strong {color:#e0d6c0;letter-spacing:2px;font-size:15px}
+.footer-brand p {color:#8995a8;font-size:10px;margin-top:7px}
+.footer-note {color:#7e8b9e;font-size:9px;line-height:1.9}
+.footer-note a {color:#c1ad85;font-size:10px}
+.auth-shell .auth-decoration {background:linear-gradient(180deg,#111a2e20,#111a2e10 25%,#111a2edd 72%,#111a2e 100%),url('/art-library/09-moonlit.webp') 50% 20% / auto 100% no-repeat,#111a2e}
+
+@media(min-width:1600px) {
+  .journey-hero,.journey-content {min-height:650px}
+  .journey-copy h1 {font-size:63px}
+  .journey-copy {width:580px}
+  .char-art {height:225px}
+}
+@media(max-width:1150px) {
+  .topbar {gap:38px}
+  .journey-hero,.journey-content {min-height:560px}
+  .journey-copy {max-width:51%}
+  .journey-copy h1 {font-size:46px}
+  .journey-actions {gap:18px}
+  .journey-actions .btn.primary {padding:13px 19px;gap:20px}
+  .hero-secondary {font-size:10px}
+  .handbook-intro {gap:18px}
+  .handbook-intro>div {padding-right:10px;gap:14px}
+  .handbook-intro>div+div {padding-left:20px}
+  .handbook-intro strong {font-size:11px}
+  .handbook-intro .feature-icon {width:36px;height:36px}
+  .feature-icon svg {width:20px;height:20px}
+  .filter {padding:10px 11px;min-width:47px;font-size:11px}
+  .catalog-tools {gap:15px;padding:12px}
+  .searchbox {width:246px}
+  .character-grid {gap:21px 17px}
+  .char-art {height:190px}
+  .char-art>.game-icon {height:178px;width:178px}
+  .char-info {padding:17px 15px 12px}
+  .char-info h3 {font-size:21px}
+  .weapon-type {font-size:9px}
+}
+@media(max-width:900px) {
+  .topbar {gap:30px}
+  .topnav {gap:24px}
+  .journey-hero,.journey-content {min-height:520px}
+  .journey-art {left:14%;width:86%}
+  .journey-art:before {background:linear-gradient(90deg,#111a2e 0%,#111a2ecc 25%,#111a2e33 70%),linear-gradient(0deg,#111a2e 0%,transparent 35%)}
+  .journey-copy {max-width:60%;width:440px}
+  .journey-copy h1 {font-size:41px}
+  .journey-copy>p:not(.hero-overline) {font-size:12px}
+  .journey-actions {align-items:flex-start;flex-direction:column;gap:17px}
+  .journey-actions .btn.primary {min-height:44px}
+  .hero-caption {right:30px;bottom:40px}
+  .hero-caption small {font-size:9px;letter-spacing:1px}
+  .hero-scroll {left:calc(50% - 30px);bottom:20px}
+  .catalog-tools {flex-direction:column;align-items:stretch;gap:13px}
+  .filters {justify-content:space-between;gap:5px}
+  .filter {padding:10px 13px;min-width:54px}
+  .searchbox {width:100%}
+  .character-grid {grid-template-columns:repeat(3,minmax(0,1fr))}
+  .char-art {height:195px}
+  .char-art>.game-icon {width:182px;height:182px}
+  .char-info>.between {display:block}
+  .weapon-type {display:block;margin-top:5px}
+  .handbook-intro>div {gap:11px;padding-right:5px}
+  .handbook-intro>div+div {padding-left:15px}
+  .handbook-intro .feature-icon {width:29px;height:29px}
+  .feature-icon>svg {width:17px;height:17px}
+  .handbook-intro strong {font-size:10px}
+  .handbook-intro small {font-size:7px;letter-spacing:1px}
+}
+@media(max-width:800px) {
+  .topbar {height:76px;gap:28px}
+  .brand strong {font-size:16px}
+  .brand small {font-size:6px;letter-spacing:2px}
+  .topnav {gap:21px;font-size:11px}
+  .top-actions .login-button {padding:9px 12px}
+  .journey-hero,.journey-content {min-height:515px}
+  .journey-copy {max-width:65%}
+  .journey-kicker {font-size:9px;letter-spacing:.7px}
+  .hero-overline {font-size:8px!important;letter-spacing:2px!important;margin-top:21px!important}
+  .journey-copy h1 {font-size:40px;margin:13px 0 18px}
+  .hero-rule {margin-bottom:18px}
+  .journey-content {padding-top:42px;padding-bottom:68px}
+  .hero-caption {right:24px;bottom:39px}
+  .hero-caption small {display:none}
+  .catalog-body {padding-top:38px}
+  .atlas-heading {margin-bottom:26px}
+  .atlas-heading h2 {font-size:28px}
+  .module-nav {background:#eae5d9f7;top:76px;border-color:#d9ceb7}
+  .character-hero {padding:28px 30px;grid-template-columns:1fr 185px;min-height:261px}
+  .hero-avatar {width:174px;height:174px}
+  .character-hero--illustrated {min-height:285px}
+  .character-hero h1 {font-size:38px}
+  .character-route {font-size:7px;letter-spacing:.4px;gap:8px;margin-bottom:16px}
+}
+@media(max-width:600px) {
+  .topbar {min-height:103px;height:auto;padding:13px 17px 0;gap:0 10px}
+  .brand {gap:9px}
+  .brandmark {width:27px;height:32px}
+  .brandmark svg {width:27px;height:27px}
+  .brand strong {font-size:15px;letter-spacing:1px}
+  .brand small {font-size:5.5px;letter-spacing:1.6px}
+  .top-actions .btn.login-button {font-size:10px;padding:8px 12px;min-height:34px}
+  .topnav {height:42px;gap:28px;margin-top:5px;font-size:11px}
+  .topnav a {height:42px}
+  .topnav a.active:after {left:9px;right:9px}
+  .topnav a.active:before {display:none}
+  .journey-hero {min-height:0;display:block}
+  .journey-art {top:0;left:0;right:0;bottom:auto;height:325px;min-height:0;width:100%;mask-image:none}
+  .journey-art>img {object-position:50% 40%;filter:saturate(.83) brightness(.97)}
+  .journey-art:before {background:linear-gradient(0deg,#111a2e 0%,#111a2e70 23%,transparent 80%)}
+  .journey-content {min-height:0;display:block;padding-top:245px;padding-bottom:69px}
+  .journey-copy {max-width:100%;width:auto;padding:0}
+  .journey-kicker {font-size:9px;letter-spacing:1px;color:#b0bbca;gap:7px}
+  .journey-kicker>span {width:4px;height:4px}
+  .hero-overline {display:none}
+  .journey-copy h1 {font-size:35px;line-height:1.55;letter-spacing:2px;margin:12px 0 14px}
+  .hero-rule {margin-bottom:14px;font-size:10px;gap:8px}
+  .hero-rule>span {width:81px}
+  .journey-copy>p:not(.hero-overline) {font-size:11px;line-height:1.95;letter-spacing:.2px}
+  .journey-actions {margin-top:22px;gap:18px;align-items:center;flex-direction:row;flex-wrap:wrap}
+  .journey-actions .btn.primary {font-size:11px;min-height:42px;padding:12px 16px;gap:17px}
+  .hero-secondary {font-size:10px;gap:5px}
+  .hero-caption {display:none}
+  .hero-scroll {bottom:17px;gap:0;left:calc(50% - 12px)}
+  .hero-scroll>span:first-child {display:none}
+  .scroll-diamond {width:23px;height:23px}
+  .hero-constellation {right:8%;top:20px;opacity:.55}
+  .handbook-intro {padding:24px 0 23px;gap:8px;align-items:stretch}
+  .handbook-intro>div,.handbook-intro>div+div {display:flex;flex-direction:column;gap:13px;padding:0;align-items:center;text-align:center;border:0}
+  .handbook-intro>div+div {border-left:1px solid #d9d0bd}
+  .handbook-intro .feature-icon {width:28px;height:28px;display:grid}
+  .handbook-intro>div>span:not(.feature-icon) {gap:5px}
+  .handbook-intro small {display:none}
+  .handbook-intro strong {font-size:9px;letter-spacing:0;line-height:1.7;text-wrap:balance}
+  .catalog-body {padding-top:30px;scroll-margin-top:123px}
+  .atlas-heading {margin-bottom:23px}
+  .section-ornament {gap:13px;margin-bottom:13px}
+  .section-ornament>span {width:35px}
+  .section-ornament>svg {width:19px;height:19px}
+  .atlas-heading .eyebrow {font-size:7px;letter-spacing:3px}
+  .atlas-heading h2 {font-size:25px;letter-spacing:2px;margin:10px 0 9px}
+  .atlas-heading>p {font-size:10px;letter-spacing:0}
+  .catalog-tools {padding:10px;gap:12px;border-radius:4px;margin-bottom:16px}
+  .filters {gap:2px;justify-content:space-between;scrollbar-width:none;padding-bottom:0}
+  .filters::-webkit-scrollbar {display:none}
+  .filter {font-size:10px;gap:6px;padding:8px 9px;min-width:31px;min-height:47px;border-radius:3px}
+  .filter>svg {width:16px;height:16px}
+  .searchbox input.search {font-size:11px;min-height:40px}
+  .catalog-meta {gap:8px;margin-bottom:17px;font-size:10px}
+  .catalog-count {font-size:10px;gap:4px}
+  .catalog-count strong {font-size:11px}
+  .ready-toggle {font-size:9px}
+  .result-filter,.reset-filters {font-size:9px}
+  .character-grid {grid-template-columns:repeat(2,minmax(0,1fr));gap:17px 12px}
+  .char-card {border-radius:4px 4px 10px 4px}
+  .char-art {height:163px}
+  .char-art>.game-icon {width:153px;height:153px;max-width:100%}
+  .char-art:before {width:132px;height:132px;top:34px}
+  .char-art:after {inset:8px;bottom:9px}
+  .char-art .element {top:12px;left:11px;padding:4px 5px;font-size:8px;gap:4px}
+  .char-art .element svg {width:12px;height:12px}
+  .char-art .card-index {right:12px;top:17px;font-size:8px}
+  .char-art .art-note {left:12px;bottom:12px;font-size:8px;letter-spacing:1px}
+  .char-info {padding:14px 12px 10px}
+  .char-info h3 {font-size:20px;letter-spacing:1px}
+  .weapon-type {font-size:9px;margin-top:5px}
+  .card-tags {margin-top:10px;gap:5px;min-height:22px}
+  .card-tags>span {font-size:8px;padding:3px 6px}
+  .char-bottom {margin-top:12px;padding-top:9px;min-height:33px}
+  .char-bottom>span:first-child {font-size:9px;gap:5px}
+  .card-open {height:22px;width:22px}
+  .card-open svg {width:13px;height:13px}
+  .catalog-footnote {margin-top:25px;padding-top:18px;font-size:9px;gap:7px}
+  .character-hero {min-height:231px;padding:24px 20px;grid-template-columns:minmax(0,1fr) 99px;gap:9px;border-radius:4px}
+  .character-route {display:block;line-height:1.8;margin-bottom:14px;font-size:6px;letter-spacing:.3px}
+  .character-route>span:first-child {font-size:8px;padding:2px 6px;margin-right:7px}
+  .character-hero .eyebrow {font-size:7px;letter-spacing:.1px;gap:5px;line-height:1.8}
+  .character-hero .eyebrow>svg {width:13px;height:13px}
+  .character-hero h1 {font-size:30px;letter-spacing:2px;margin:10px 0 8px}
+  .character-title {font-size:10px;letter-spacing:2px;margin-bottom:14px}
+  .character-hero .tag {font-size:9px;padding:3px 6px}
+  .hero-avatar {height:96px;width:96px;box-shadow:0 0 0 5px #d2bc8109,0 0 0 6px #d2bc8120}
+  .character-hero:after {inset:7px}
+  .character-hero--illustrated {min-height:290px;grid-template-columns:1fr;padding-top:95px}
+  .character-hero--illustrated .character-cover-image {width:100%;object-position:50% 40%;opacity:.77;mask-image:none}
+  .character-hero--illustrated:before {background:linear-gradient(90deg,#111a2eeb,#111a2e33),linear-gradient(0deg,#111a2e,#111a2e00 100%)}
+  .character-hero--illustrated .hero-avatar {display:none}
+  .character-hero--illustrated .character-hero-copy {max-width:80%}
+  .quick-build .quick-card {border-radius:4px;padding:15px}
+  .module-nav {top:103px;border-radius:4px}
+  .section-head h2 {font-size:22px}
+  .weapon-card,.artifact-card,.rotation details {border-radius:4px}
+  .panel {border-radius:4px}
+  .footer {padding-top:27px;padding-bottom:28px;gap:20px}
+  .footer-brand strong {font-size:14px}
+  .footer-brand p {font-size:9px}
+  .footer-note {font-size:8px;gap:12px}
+  .auth-shell .auth-decoration {background:linear-gradient(115deg,#111a2ef5,#263454)}
+}
+@media(max-width:360px) {
+  .topbar {padding-left:14px;padding-right:14px}
+  .brand strong {font-size:14px}
+  .brandmark {width:24px}
+  .brand small {font-size:5px;letter-spacing:1.4px}
+  .top-actions .btn.login-button {font-size:9px;padding:8px 10px}
+  .journey-content {padding-top:218px;padding-bottom:61px}
+  .journey-art {height:285px}
+  .journey-copy h1 {font-size:31px;letter-spacing:2px}
+  .journey-copy>p:not(.hero-overline) {font-size:10px}
+  .journey-actions {gap:15px}
+  .journey-actions .btn.primary {padding:11px 14px;gap:12px;font-size:10px}
+  .hero-secondary {font-size:9px}
+  .filter {min-width:29px;padding:8px 7px}
+  .atlas-heading h2 {font-size:23px}
+  .char-art {height:144px}
+  .char-art>.game-icon {height:137px;width:137px}
+  .char-info {padding-left:10px;padding-right:10px}
+  .char-info h3 {font-size:18px}
+  .char-art .element {font-size:7px;left:10px;gap:3px}
+  .character-hero {grid-template-columns:minmax(0,1fr) 82px;padding-left:18px;padding-right:18px}
+  .hero-avatar {width:80px;height:80px}
+  .character-hero h1 {font-size:27px}
+  .character-hero--illustrated {grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce) {
+  *,*::before,*::after {animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}

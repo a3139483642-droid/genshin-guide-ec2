@@ -1,0 +1,55 @@
+{
+  "isolatedData": true,
+  "checks": [
+    "多图上传、排序、替换、移除、自动标题、原位预览",
+    "一键保存并发布，无解析队列，无方案选择或模块卡片",
+    "游客阅读、长图原比例、三个屏幕宽度、Esc 关闭图片、讨论默认收起",
+    "旧图片模块自动适配新发布器，原图和旧评语保持完整",
+    "历史文字攻略可编辑和发布，正文保持完整"
+  ],
+  "screenshots": [
+    "后台发布-桌面.png",
+    "攻略阅读-桌面.png",
+    "攻略阅读-手机.png",
+    "后台发布-手机.png"
+  ],
+  "viewportChecks": [
+    {
+      "label": "阅读页 1440",
+      "width": 1440,
+      "content": 1440
+    },
+    {
+      "label": "阅读页 768",
+      "width": 768,
+      "content": 768
+    },
+    {
+      "label": "阅读页 360",
+      "width": 360,
+      "content": 360
+    },
+    {
+      "label": "编辑页 1440",
+      "width": 1440,
+      "content": 1440
+    },
+    {
+      "label": "编辑页 768",
+      "width": 768,
+      "content": 768
+    },
+    {
+      "label": "编辑页 360",
+      "width": 360,
+      "content": 360
+    }
+  ],
+  "imageMetrics": {
+    "naturalWidth": 1080,
+    "naturalHeight": 2692,
+    "width": 812,
+    "height": 2024
+  },
+  "passed": true
+}

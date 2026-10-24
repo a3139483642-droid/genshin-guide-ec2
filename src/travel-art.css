@@ -1,0 +1,66 @@
+/* Complete, captioned postcards from the existing image library. */
+.travel-figure {margin:0;min-width:0;overflow:hidden;border:1px solid #d5c9af;border-radius:4px;background:#fffcf4}
+.travel-figure>img {display:block;width:100%;height:auto;background:#111a2e}
+.travel-figure>figcaption {display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 18px;border-top:1px solid #ded5c1}
+.travel-figure figcaption strong {font-family:"Songti SC","SimSun",Georgia,serif;color:#354359;font-size:15px;letter-spacing:.6px;font-weight:400}
+.travel-figure figcaption>span {font-size:10px;color:#8a806c;line-height:1.7}
+.travel-memories {padding:32px 0 50px;border-top:1px solid #dbd0ba}
+.memories-heading {display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin-bottom:23px}
+.memories-heading .eyebrow,.about-memories>.eyebrow {font-size:9px;letter-spacing:2px}
+.memories-heading h2 {font-size:27px;font-weight:400;letter-spacing:3px;margin:10px 0 0}
+.memories-heading>p {font-size:12px;color:#85857e;margin:0 0 4px}
+.memories-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.memories-grid .travel-figure>img {aspect-ratio:16/9;object-fit:contain}
+.memories-grid .travel-figure>figcaption {display:grid;gap:6px;padding:17px 18px}
+.memories-grid .travel-figure figcaption strong {font-size:15px;line-height:1.7}
+.about-cover {margin:30px 0 34px}
+.about-memories {margin:38px 0}
+.about-memories>h2 {font-size:24px;line-height:1.7;letter-spacing:1px;font-weight:400;margin:12px 0 22px}
+.about-memories .memories-grid {grid-template-columns:repeat(2,minmax(0,1fr))}
+.account-memory {display:grid;grid-template-columns:1.6fr 1fr;align-items:stretch;margin:25px 0 30px}
+.account-memory>figcaption {display:flex;flex-direction:column;align-items:flex-start;justify-content:center;border-top:0;border-left:1px solid #ded5c1;padding:28px}
+
+/* Text and promotional titles have their own space on character pages. */
+.character-hero--postcard {grid-template-columns:minmax(220px,.85fr) minmax(0,1.5fr);gap:36px;padding:32px 35px;min-height:324px}
+.character-hero--postcard .travel-figure {position:relative;z-index:2;border-color:#b9a06a50;background:#111a2e;box-shadow:0 8px 25px #090f1d40}
+.character-hero--postcard .travel-figure>figcaption {border-color:#b9a06a38;background:#172239;padding:12px 15px}
+.character-hero--postcard .travel-figure figcaption strong {color:#e1d0a9;font-size:12px}
+.character-hero--postcard .travel-figure figcaption>span {color:#a9b1c2;font-size:9px;white-space:nowrap}
+
+/* Keep the login artwork visible at every breakpoint. */
+.auth-shell .auth-decoration {background:#111a2e;isolation:isolate;overflow:hidden}
+.auth-shell .auth-decoration>.auth-art {position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 20%;z-index:0}
+.auth-shell .auth-decoration>.auth-art-shade {position:absolute;inset:0;z-index:1;background:linear-gradient(180deg,#111a2e0d,#111a2e05 25%,#111a2ee8 78%,#111a2e)}
+
+@media(max-width:1000px) {
+  .memories-grid {gap:16px}
+  .memories-grid .travel-figure>figcaption {padding:14px}
+  .memories-grid .travel-figure figcaption strong {font-size:13px}
+  .character-hero--postcard {grid-template-columns:minmax(180px,.8fr) minmax(0,1.35fr);gap:22px;padding:28px}
+  .character-hero--postcard .travel-figure>figcaption {display:grid;gap:4px}
+}
+@media(max-width:800px) {
+  .auth-shell .auth-decoration {min-height:265px;padding:40px 36px 30px}
+  .auth-shell .auth-decoration>.auth-art {object-position:50% 38%}
+  .auth-shell .auth-decoration>.auth-art-shade {background:linear-gradient(90deg,#111a2ee0,#111a2e52 75%),linear-gradient(0deg,#111a2edb,transparent 90%)}
+}
+@media(max-width:640px) {
+  .travel-memories {padding:27px 0 34px}
+  .memories-heading {display:block;margin-bottom:19px}
+  .memories-heading h2 {font-size:25px}
+  .memories-heading>p {margin-top:12px;font-size:11px;line-height:1.8}
+  .memories-grid,.about-memories .memories-grid {grid-template-columns:minmax(0,1fr);gap:19px}
+  .travel-figure>figcaption {padding:14px;flex-wrap:wrap;gap:6px}
+  .travel-figure figcaption strong,.memories-grid .travel-figure figcaption strong {font-size:14px}
+  .about-cover {margin:24px 0 28px}
+  .about-memories {margin:30px 0}
+  .about-memories>h2 {font-size:21px}
+  .account-memory {display:block}
+  .account-memory>figcaption {border-left:0;border-top:1px solid #ded5c1;padding:16px}
+  .character-hero--postcard {display:grid;grid-template-columns:minmax(0,1fr);gap:23px;padding:25px 20px 20px}
+  .character-hero--postcard .character-hero-copy {max-width:none}
+  .character-hero--postcard .travel-figure>figcaption {padding:12px;gap:4px}
+  .character-hero--postcard .character-route {margin-bottom:14px}
+  .character-hero--postcard h1 {font-size:30px}
+  .auth-shell .auth-decoration {min-height:250px;padding:30px 26px}
+}

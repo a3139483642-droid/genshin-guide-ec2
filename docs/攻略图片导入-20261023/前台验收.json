@@ -1,0 +1,72 @@
+{
+  "passed": true,
+  "checkedAt": "2026-10-23T12:20:11.242Z",
+  "checkedGuides": 102,
+  "checkedImages": 101,
+  "emptyAuthorComments": 102,
+  "byteIdenticalImages": 101,
+  "availableCharacters": 102,
+  "mobileViewer": true,
+  "checks": [
+    {
+      "characterId": "odette",
+      "emptyComment": true,
+      "originalAspectRatio": true,
+      "width": 812,
+      "height": 2158,
+      "naturalWidth": 1080,
+      "naturalHeight": 2870
+    },
+    {
+      "characterId": "aether",
+      "emptyComment": true,
+      "originalAspectRatio": true,
+      "width": 812,
+      "height": 1871,
+      "naturalWidth": 1080,
+      "naturalHeight": 2488
+    },
+    {
+      "characterId": "lumine",
+      "emptyComment": true,
+      "originalAspectRatio": true,
+      "width": 812,
+      "height": 1871,
+      "naturalWidth": 1080,
+      "naturalHeight": 2488
+    },
+    {
+      "characterId": "kazuha",
+      "emptyComment": true,
+      "originalAspectRatio": true,
+      "width": 812,
+      "height": 2177,
+      "naturalWidth": 1080,
+      "naturalHeight": 2896
+    },
+    {
+      "characterId": "raiden",
+      "emptyComment": true,
+      "originalAspectRatio": true,
+      "width": 812,
+      "height": 2176,
+      "naturalWidth": 1080,
+      "naturalHeight": 2894
+    },
+    {
+      "characterId": "ifa",
+      "emptyComment": true,
+      "originalAspectRatio": true,
+      "width": 812,
+      "height": 1885,
+      "naturalWidth": 1080,
+      "naturalHeight": 2507
+    }
+  ],
+  "screenshots": [
+    "攻略实图-桌面.png",
+    "攻略实图-手机.png",
+    "已有攻略图鉴-手机.png"
+  ],
+  "browserErrors": []
+}
